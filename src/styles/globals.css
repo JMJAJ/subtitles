@@ -1,0 +1,56 @@
+/* src/styles/globals.css */
+
+/* Base Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global Variables for Light Theme */
+:root {
+  --primary-color: #0070f3;
+  --primary-color-dark: #005bb5;
+  --background-color: #f6f9fc;
+  --container-bg: #ffffff;
+  --text-color: #333333;
+  --border-color: #eaeaea;
+  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --transition-speed: 0.3s;
+  --max-width: 600px;
+  --btn-hover-scale: 1.02;
+}
+
+/* Override with Dark Theme Variables */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #79b8ff;
+    --primary-color-dark: #3590ff;
+    --background-color: #121212;
+    --container-bg: #1e1e1e;
+    --text-color: #eaeaea;
+    --border-color: #333333;
+    --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+  }
+}
+
+/* Global Body Styles */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Utility Classes */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,149 @@
+/* src/styles/Home.module.css */
+
+.container {
+  max-width: var(--max-width);
+  margin: 15rem auto;
+  padding: 2rem;
+  background: var(--container-bg);
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-color-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.fileUploadContainer {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.fileInput {
+  display: none;
+}
+
+.fileLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: var(--container-bg);
+  border: 2px dashed var(--primary-color);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all var(--transition-speed);
+}
+
+.fileLabel:hover {
+  background: rgba(var(--primary-color-rgb), 0.05);
+  transform: translateY(-2px);
+}
+
+.selectContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.selectGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.selectLabel {
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  background: var(--container-bg);
+  color: var(--text-color);
+  font-size: 1rem;
+  transition: border-color var(--transition-speed);
+}
+
+.select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.button {
+  width: 100%;
+  padding: 1rem;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-speed);
+}
+
+.button:hover {
+  background: var(--primary-color-dark);
+  transform: scale(var(--btn-hover-scale));
+}
+
+.button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.progressContainer {
+  margin: 1.5rem 0;
+  background: var(--background-color);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 0.5rem;
+  background: linear-gradient(90deg, var(--primary-color), var(--primary-color-dark));
+  transition: width 0.3s ease;
+  position: relative;
+}
+
+.progressText {
+  position: absolute;
+  top: -1.5rem;
+  right: 0;
+  font-size: 0.875rem;
+  color: var(--text-color);
+}
+
+.error {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #ff5757;
+  color: white;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  animation: shake 0.5s ease-in-out;
+}
+
+.fileName {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-color);
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
